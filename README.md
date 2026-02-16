@@ -1,5 +1,10 @@
 # Drone Dataset Repository
 
+[![GitHub](https://img.shields.io/badge/GitHub-Gladiator2005%2FDrone--Dataset-blue?logo=github)](https://github.com/Gladiator2005/Drone-Dataset)
+[![Repository](https://img.shields.io/badge/Repository-Link-green)](https://github.com/Gladiator2005/Drone-Dataset)
+
+**🔗 Repository Link:** [https://github.com/Gladiator2005/Drone-Dataset](https://github.com/Gladiator2005/Drone-Dataset)
+
 This repository contains datasets and projects related to AI/ML development.
 
 ## Contents

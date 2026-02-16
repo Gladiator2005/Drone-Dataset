@@ -1,5 +1,7 @@
 # Job Discovery System
 
+**🔗 Main Repository:** [https://github.com/Gladiator2005/Drone-Dataset](https://github.com/Gladiator2005/Drone-Dataset)
+
 A personal/hobby AIML internship and entry-level job discovery system built with Python. This system automatically scrapes, filters, scores, and alerts you about relevant AI/ML opportunities across multiple platforms.
 
 ## 🎯 Overview
