@@ -1,0 +1,207 @@
+# Job Discovery System Configuration
+
+# User Profile
+user:
+  field: "Artificial Intelligence & Machine Learning"
+  education: "B.Tech undergraduate"
+  city: "Bangalore"  # Change to your city
+  country: "India"
+  location_radius_km: 50
+  
+  skills:
+    languages:
+      - Python
+      - SQL
+    frameworks:
+      - NumPy
+      - Pandas
+      - Scikit-learn
+      - TensorFlow
+      - PyTorch
+    domains:
+      - Computer Vision
+      - NLP
+      - LLMs
+      - Data Science
+    tools:
+      - Git
+      - Linux
+      - Docker
+
+  target_roles:
+    - AI Intern
+    - ML Intern
+    - Data Science Intern
+    - CV Intern
+    - NLP Intern
+    - Computer Vision Intern
+    - Machine Learning Intern
+
+# Scraping Configuration
+scraping:
+  user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+  rate_limit:
+    min_delay: 2
+    max_delay: 5
+  respect_robots_txt: true
+  cache_enabled: true
+  cache_ttl_hours: 24
+  timeout_seconds: 30
+
+# Sources Configuration
+sources:
+  job_boards:
+    - name: "Internshala"
+      url: "https://internshala.com"
+      enabled: true
+      frequency_hours: 4
+    - name: "Naukri"
+      url: "https://www.naukri.com"
+      enabled: true
+      frequency_hours: 6
+    - name: "Indeed India"
+      url: "https://www.indeed.co.in"
+      enabled: true
+      frequency_hours: 4
+    - name: "LetsIntern"
+      url: "https://www.letsintern.com"
+      enabled: true
+      frequency_hours: 12
+  
+  remote_platforms:
+    - name: "RemoteOK"
+      url: "https://remoteok.com/api"
+      enabled: true
+      frequency_hours: 3
+    - name: "Wellfound"
+      url: "https://wellfound.com"
+      enabled: true
+      frequency_hours: 6
+  
+  remote_companies:
+    - name: "GitLab"
+      url: "https://about.gitlab.com/jobs"
+      enabled: true
+    - name: "Automattic"
+      url: "https://automattic.com/careers"
+      enabled: true
+    - name: "Zapier"
+      url: "https://zapier.com/jobs"
+      enabled: true
+    - name: "Canonical"
+      url: "https://canonical.com/careers"
+      enabled: true
+    - name: "HuggingFace"
+      url: "https://huggingface.co/jobs"
+      enabled: true
+  
+  indian_companies:
+    - name: "Google India"
+      url: "https://www.google.com/about/careers/applications/jobs/results"
+      enabled: true
+    - name: "Microsoft India"
+      url: "https://careers.microsoft.com"
+      enabled: true
+    - name: "Amazon India"
+      url: "https://www.amazon.jobs"
+      enabled: true
+    - name: "NVIDIA India"
+      url: "https://www.nvidia.com/en-in/about-nvidia/careers"
+      enabled: true
+
+# Scoring Configuration
+scoring:
+  weights:
+    skill_match: 0.40
+    internship_fit: 0.20
+    location_match: 0.15
+    freshness: 0.15
+    company_relevance: 0.10
+  
+  min_relevance_score: 70
+  high_relevance_threshold: 75
+
+# Filtering
+filtering:
+  only_internships_or_remote: true
+  exclude_unpaid: false
+  max_experience_years: 2
+  deduplicate: true
+  fuzzy_match_threshold: 0.85
+
+# Alerting
+alerts:
+  console_enabled: true
+  email_enabled: false
+  email:
+    smtp_server: "smtp.gmail.com"
+    smtp_port: 587
+    sender_email: ""
+    sender_password: ""
+    recipient_email: ""
+  
+  triggers:
+    min_relevance_score: 75
+    notify_remote_internships: true
+    notify_new_skill_matches: true
+
+# Scheduling
+scheduling:
+  enabled: true
+  default_frequency_hours: 6
+
+# Storage
+storage:
+  database: "job_discovery.db"
+  keep_history_days: 90
+
+# AIML Skills Taxonomy
+taxonomy:
+  languages:
+    - Python
+    - R
+    - SQL
+    - Java
+    - C++
+    - Julia
+    - Scala
+  
+  frameworks:
+    - TensorFlow
+    - PyTorch
+    - Keras
+    - scikit-learn
+    - NumPy
+    - Pandas
+    - OpenCV
+    - Hugging Face
+    - spaCy
+    - NLTK
+    - FastAPI
+    - Flask
+  
+  domains:
+    - Computer Vision
+    - Natural Language Processing
+    - NLP
+    - Large Language Models
+    - LLMs
+    - Machine Learning
+    - Deep Learning
+    - Data Science
+    - Reinforcement Learning
+    - Robotics
+    - MLOps
+  
+  tools:
+    - Git
+    - Docker
+    - Kubernetes
+    - AWS
+    - Azure
+    - GCP
+    - Linux
+    - Jupyter
+    - MLflow
+    - TensorBoard
+    - Weights & Biases
